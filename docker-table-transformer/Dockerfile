@@ -25,12 +25,6 @@ WORKDIR /app
 # ideally, the code file should be contained in a directory called "src"
 COPY ./src /app
 
-# optional for candidates: they need to successfully clone Wiz-PyUtils
-# optional for candidates: from git, clone the required files and copy to the app workdir
-RUN git clone https://5b29d5e648790023d7af695d98117c6e50b798d8@git.wizpresso.com/Wizpresso/Wiz-PyUtils.git
-RUN sh -c 'cp /app/Wiz-PyUtils/PDFPixelCoordinateConverter.py /app/'
-RUN sh -c 'cp /app/Wiz-PyUtils/PDFToImageConverter.py /app/'
-
 # run conda to create env and install libraries
 # optional for candidates: specify the correct library version
 RUN conda create --name pdf_table_recognition_api python=3.8

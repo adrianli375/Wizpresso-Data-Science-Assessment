@@ -28,12 +28,6 @@ feature_extractor = DetrFeatureExtractor(do_resize=False)
 print('Finished loading Table Structure Recognition Model...', datetime.now())
 
 
-if __debug__:
-    sys.path.append(r'C:\Wizpresso Codebase\Development\Operations\Utils\Wiz-PyUtils')
-else:
-    sys.path.append(r'C:\Wizpresso Codebase\Production\Operations\Utils\Wiz-PyUtils')
-
-from PDFToImageConverter import convert_pdf_to_image
 from PDFPixelCoordinateConverter import convert_pdf_coordinates_to_pixel, convert_pixel_to_pdf_coordinates
 
 
