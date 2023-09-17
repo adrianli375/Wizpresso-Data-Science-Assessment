@@ -21,16 +21,13 @@ RUN conda install -n base conda-libmamba-solver
 RUN conda config --set solver libmamba
 
 # set working directory and get cloned files
-WORKDIR /app
+WORKDIR /src
 # ideally, the code file should be contained in a directory called "src"
-COPY ./src /app
+COPY .. /src
 
 # run conda to create env and install libraries
 # optional for candidates: specify the correct library version
-RUN conda create --name pdf_table_recognition_api python=3.8
-RUN conda install pandas numpy -y
-RUN pip install torch torchvision torchaudio
-RUN pip install Pillow Flask
+RUN conda env create -f pdf_table_recognition_api_env.yml
 RUN conda init bash
 
 # optional for candidates: set proper timezone

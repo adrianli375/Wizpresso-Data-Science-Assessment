@@ -1,0 +1,16 @@
+name: pdf_table_recognition_api
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas=1.5.3
+  - pip
+  - pip:
+    - transformers
+    - torch
+    - torchvision
+    - torchaudio
+    - timm
+    - Pillow
+    - Flask
