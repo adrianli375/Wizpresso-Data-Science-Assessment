@@ -3,7 +3,6 @@ from math import floor, ceil
 
 def convert_pdf_coordinates_to_pixel(image, start_x, end_x, start_y, end_y, origin_x=0, origin_y=0, origin_type='pdf', conversion_ratio=2):
     """
-
     @param image: Bytes representation of an image
     @param start_x: x-Coordinate of left bottom corner of textbox with (0, 0) as left bottom corner of the image
     @param end_x: x-Coordinate of right upper corner of textbox with (0, 0) as left bottom corner of the image
@@ -12,7 +11,7 @@ def convert_pdf_coordinates_to_pixel(image, start_x, end_x, start_y, end_y, orig
     @param origin_x: Top left (x, y) to perform coordinates conversion
     @param origin_y: Top left (x, y) to perform coordinates conversion
     @param origin_type: Either pdf or pixel, indicate which coordinate system origin is using
-    @param conversion_ratio:
+    @param conversion_ratio: 2 (as configured in PDFConverterServer)
     @return: Adjusted coordinates based on numpy order ((0, 0) as left upper corner of the image in order to match
     the exact pixels)
 
@@ -34,7 +33,6 @@ def convert_pdf_coordinates_to_pixel(image, start_x, end_x, start_y, end_y, orig
 
 def convert_pixel_to_pdf_coordinates(image, start_x, end_x, start_y, end_y, border_size, conversion_ratio=2):
     """
-
     @param image: Bytes representation of an image
     @param start_x: x-Coordinate of left bottom corner of textbox with (0, 0) as left top corner of the image
     @param end_x: x-Coordinate of right upper corner of textbox with (0, 0) as left top corner of the image
