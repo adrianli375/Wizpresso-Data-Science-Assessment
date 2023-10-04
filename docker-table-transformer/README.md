@@ -39,10 +39,7 @@ If you are new to Docker, you may download the Docker application in the [offici
 
 After you have built the `Dockerfile`, please push your latest changes to your personal GitHub repo and share the repo with us. 
 
-## Bonus 1
-Your API endpoint can cater for GPU capabilities by adding suitable code during data preparation and modelling. 
-
-## Bonus 2
+## Bonus
 To test if the API works, you can try to run `PDFTableStructureRecognition.py` inside the Docker container. If the API works, you will see that all test cases will pass.
 
 Successful sample: 

@@ -5,7 +5,7 @@ This document outlines the details on the implementation of the PDF Table Struct
 ## Basic Information
 - The endpoint of your API should be `/process-table-structure` and the method of the API is `POST`. 
 - The service should be accepting json as an input. The json format should look like ```{'image_path': PATH_TO_IMAGE}```. 
-- Please expose your service to port number `8815`. This is to ensure consistency in our internal workstations when checking your work.
+- Please expose your service to port number `8815`. 
 
 ## Libraries, Modules and Models Used
 - You need to import `TableTransformerForObjectDetection` and `DetrFeatureExtractor` from the `transformers` library. Other libraries, that are not listed here, may also be necessary.
